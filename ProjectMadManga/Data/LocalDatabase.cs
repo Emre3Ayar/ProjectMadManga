@@ -19,7 +19,8 @@ namespace ProjectMadManga.Data
 
         public async Task<List<Car>> GetCars()
         {
-            await _database.DeleteAllAsync<Car>();
+            //Reset database
+            //await _database.DeleteAllAsync<Car>();
             //return _database.Table<Car>().ToListAsync();
             var car = await _database.Table<Car>().ToListAsync();
             if (!car.Any())

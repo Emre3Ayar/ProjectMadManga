@@ -21,24 +21,28 @@ namespace ProjectMadManga
         }
         async void Create_Clicked(object sender, System.EventArgs e)
         {
-            var afbeelding = EntAfbeelding.Text;
+            //Waardes voor HotWheels ophalen
+            var afbeelding = EntCarName.Text;
             var Naam = EntCarName.Text;
             var Accel = double.Parse(EntCarAccel.Text);
             var Braking = double.Parse(EntCarBraking.Text);
             var Wanted = double.Parse(EntCarWanted.Text);
             var Handeling = double.Parse(EntCarHandeling.Text);
             var TopSpeed = double.Parse(EntCarTopSpeed.Text);
-            await App.Database.SaveCar(new Car
-            {
-                CarName = Naam,
-                CarAccel =  Accel,
-                CarBraking = Braking,
-                CarHandeling = Handeling,
-                CarImage = afbeelding,
-                CarTopSpeed = TopSpeed,
-                CarWanted = Wanted
-            });
-            EntAfbeelding.Text = string.Empty;
+            //Nieuwe HotWheels declareren
+            //await App.Database.SaveCar(new Car
+            //{
+            //    CarName = Naam,
+            //    CarAccel =  Accel,
+            //    CarBraking = Braking,
+            //    CarHandeling = Handeling,
+            //    CarImage = afbeelding,
+            //    CarTopSpeed = TopSpeed,
+            //    CarWanted = Wanted
+            //});
+
+
+            //Leeg maken velden
             EntCarName.Text = string.Empty;
             EntCarAccel.Text = string.Empty;
             EntCarBraking.Text = string.Empty;
@@ -46,7 +50,6 @@ namespace ProjectMadManga
             EntCarHandeling.Text = string.Empty;
             EntCarTopSpeed.Text = string.Empty;
             await this.Navigation.PopAsync();
-        }
-        
+        }    
     }
 }
