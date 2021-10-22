@@ -20,12 +20,11 @@ namespace ProjectMadManga.Data
         public async Task<List<Car>> GetCars()
         {
             //Reset database
-            //await _database.DeleteAllAsync<Car>();
+            await _database.DeleteAllAsync<Car>();
             //return _database.Table<Car>().ToListAsync();
             var car = await _database.Table<Car>().ToListAsync();
             if (!car.Any())
-            {
-                
+            {            
                 await _database.InsertAllAsync(new Car[]
                 {
                     new Car{Id = 1, CarName = "Drifsta", CarAccel = 1.2, CarBraking = 0, CarHandeling = 0, CarImage = "Drifsta", CarTopSpeed = 50, CarWanted = 1, CarDetail = "The Driftsta is a Hot Wheels Original Model designed by Jun Imai. The sleek and aerodynamic shape of the car makes it perfect for drifting through those corners. Even its name screams drifting. With the roof rack, exposed intercooler for the twin turbo engine and missing front spoiler, this rubber destroying beast is ready to produce some smoke. Use the double nitrous to boost your speed before pulling the handbrake and turning the wheel."},
@@ -41,6 +40,26 @@ namespace ProjectMadManga.Data
         public Task<int> SaveCar(Car car)
         {
             return _database.InsertAsync(car);
+        }
+        public async Task<int> NameControl(string name)
+        {
+            int output = 0;
+            string items = "";
+            var gevondenitems = await _database.QueryAsync<Car>("SELECT * FROM Car WHERE CarName = ?", name);
+            foreach (var s in gevondenitems)
+            {
+                items += s.CarName;
+            }
+            if (items == "")
+            {
+                output = 1;
+                return output;
+            }
+            else
+            {
+                output = 0;
+                return output;
+            };
         }
     }
 }

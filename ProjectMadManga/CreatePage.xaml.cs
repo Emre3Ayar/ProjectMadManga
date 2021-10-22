@@ -30,26 +30,36 @@ namespace ProjectMadManga
             var Handeling = double.Parse(EntCarHandeling.Text);
             var TopSpeed = double.Parse(EntCarTopSpeed.Text);
             //Nieuwe HotWheels declareren
-            //await App.Database.SaveCar(new Car
-            //{
-            //    CarName = Naam,
-            //    CarAccel =  Accel,
-            //    CarBraking = Braking,
-            //    CarHandeling = Handeling,
-            //    CarImage = afbeelding,
-            //    CarTopSpeed = TopSpeed,
-            //    CarWanted = Wanted
-            //});
 
-
-            //Leeg maken velden
-            EntCarName.Text = string.Empty;
-            EntCarAccel.Text = string.Empty;
-            EntCarBraking.Text = string.Empty;
-            EntCarWanted.Text = string.Empty;
-            EntCarHandeling.Text = string.Empty;
-            EntCarTopSpeed.Text = string.Empty;
-            await this.Navigation.PopAsync();
+            if (await App.Database.NameControl(EntCarName.Text) == 0)
+            {
+                LblMelding.TextColor = Color.Red;
+                LblMelding.Text = "Voertuig bestaat al";
+            }
+            else
+            {
+                LblMelding.TextColor = Color.Green;
+                LblMelding.Text = "Succes";
+                await App.Database.SaveCar(new Car
+                {
+                    CarName = Naam,
+                    CarAccel = Accel,
+                    CarBraking = Braking,
+                    CarHandeling = Handeling,
+                    CarImage = afbeelding,
+                    CarTopSpeed = TopSpeed,
+                    CarWanted = Wanted
+                });
+                //string OutputLine = $""
+                //Leeg maken velden
+                EntCarName.Text = string.Empty;
+                EntCarAccel.Text = string.Empty;
+                EntCarBraking.Text = string.Empty;
+                EntCarWanted.Text = string.Empty;
+                EntCarHandeling.Text = string.Empty;
+                EntCarTopSpeed.Text = string.Empty;
+                //await this.Navigation.PopAsync();
+            }
         }    
     }
 }

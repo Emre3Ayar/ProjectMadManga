@@ -4,7 +4,7 @@
              x:Class="ProjectMadManga.CreatePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Create Page"/>
+            <Label x:Name="LblMelding" Text="Welcome to Create Page"/>
 
             <Entry x:Name="EntCarName" Text="AutoNaamHier" HorizontalOptions="Center" FontSize="30"></Entry>
 
