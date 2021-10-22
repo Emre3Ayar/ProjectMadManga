@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectMadManga.DetailPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#328ADC">
+            <Image x:Name="ImgAfbeelding" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="Black"></Image>
+            
+            <StackLayout BackgroundColor="Yellow">
+                <Label x:Name="LblNaam" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="Black" TextColor="White" FontSize="30" HorizontalTextAlignment="Center"></Label>
+                <Label x:Name="LblAccel" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="Black" TextColor="#924E00" FontSize="23" HorizontalTextAlignment="Start" Margin="50,0,50,0" FontAttributes="Bold" Padding="10,0,0,0"></Label>
+            <Label x:Name="LblTopSpeed" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="Black" TextColor="#924E00" FontSize="23" HorizontalTextAlignment="Start" Margin="50,0,50,0" FontAttributes="Bold" Padding="10,0,0,0"></Label>
+            <Label x:Name="LblWanted" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="Black" TextColor="#924E00" FontSize="23" HorizontalTextAlignment="Start" Margin="50,0,50,0" FontAttributes="Bold" Padding="10,0,0,0"></Label>
+            </StackLayout>
+            
+            <ScrollView>
+                <Label x:Name="LblDetail" FontSize="30" Padding="20,5,20,20"></Label>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

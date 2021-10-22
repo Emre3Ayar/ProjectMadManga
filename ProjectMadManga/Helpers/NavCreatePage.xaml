@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectMadManga.Helpers.NavCreatePage"
+             Title="Create"
+             >
+    <StackLayout>
+        <Label Text="Create Car" BackgroundColor="Black" TextColor="Red" LineHeight="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="40"></Label>
+        <Button x:Name="BtnCreate" Clicked="BtnCreate_Clicked" Text="Create Car"></Button>
+    </StackLayout>
+</ContentPage>

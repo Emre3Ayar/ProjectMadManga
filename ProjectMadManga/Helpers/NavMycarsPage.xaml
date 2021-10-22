@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectMadManga.Helpers.NavMycarsPage"
+             Title="MyCars"
+             >
+    <StackLayout BackgroundColor="#328ADC">
+        <Label Text="Hot Wheels Cars" BackgroundColor="#FFE032" TextColor="#924E00" LineHeight="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="40"></Label>
+        <RefreshView>
+            <CollectionView VerticalOptions="FillAndExpand" x:Name="CarLijst" SelectionMode="Single" SelectionChanged="OnSelectedHotWheels">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid BackgroundColor="Black">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="120"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Row="0" Grid.Column="0" Source="{Binding CarImage}" BackgroundColor="Black"></Image>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding CarImage}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White" FontSize="23"></Label>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectMadManga.MainPage"
+             BackgroundColor="#D9F1F6">
+
+    <FlexLayout Direction="Column" AlignItems="Stretch" Margin="0,50,0,0">
+
+        <Image Source="LogoHW"></Image>
+        <Label x:Name="LblMelding" XAlign="Center" YAlign="Center" TextColor="Red" FontAttributes="Bold"/>
+        <Label Text="Gebruikersnaam" XAlign="Center" YAlign="Center" FontAttributes="Bold"/>
+        <Entry x:Name="EntGebruikersnaam"></Entry>
+
+        <Label Text="Password" XAlign="Center" YAlign="Center" FontAttributes="Bold"/>
+        <Entry x:Name="EntPassword"></Entry>
+
+
+        <Button Clicked="LogIn_Clicked" Text="Log In" BackgroundColor="Black" TextColor="White"/>
+    </FlexLayout>
+
+</ContentPage>
