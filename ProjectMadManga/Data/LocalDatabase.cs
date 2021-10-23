@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using ProjectMadManga.Models;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace ProjectMadManga.Data
         {
             _database = new SQLiteAsyncConnection(dPath);
             _database.CreateTableAsync<Car>().Wait();
+            _database.CreateTableAsync<User>().Wait();
         }
 
         public async Task<List<Car>> GetCars()
@@ -41,6 +43,7 @@ namespace ProjectMadManga.Data
         {
             return _database.InsertAsync(car);
         }
+
         public async Task<int> NameControl(string name)
         {
             int output = 0;
@@ -60,6 +63,23 @@ namespace ProjectMadManga.Data
                 output = 0;
                 return output;
             };
+        }
+        public async Task<List<User>> GetUsers()
+        {
+            //Reset database
+            await _database.DeleteAllAsync<User>();
+            //return _database.Table<Car>().ToListAsync();
+            var user = await _database.Table<User>().ToListAsync();
+            if (!user.Any())
+            {
+                await _database.InsertAllAsync(new User[]
+                {
+                    new User{UserId = 0, UserName = "Serdal", UserPassword = "macka61"},
+                    new User{UserId = 1, UserName = "Emre", UserPassword = "123"},
+                });
+                return await _database.Table<User>().ToListAsync();
+            }
+            return user;
         }
     }
 }

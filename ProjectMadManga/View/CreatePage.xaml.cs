@@ -60,6 +60,6 @@ namespace ProjectMadManga
                 EntCarTopSpeed.Text = string.Empty;
                 //await this.Navigation.PopAsync();
             }
-        }    
+        }          
     }
 }

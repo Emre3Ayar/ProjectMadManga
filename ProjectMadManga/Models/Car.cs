@@ -19,7 +19,6 @@ namespace ProjectMadManga
         public double CarHandeling { get; set; }
         public double CarBraking { get; set; }
         public double CarWanted { get; set; }
-        public string CarDetail { get; set; }
-        
+        public string CarDetail { get; set; }     
     }
 }
