@@ -15,7 +15,8 @@ namespace ProjectMadManga.Helpers
         public NavMycarsPage()
         {
             InitializeComponent();
-            
+            Resources["HotWheelsStackLayout"] = App.Current.Resources["HotWheelsStackLayoutF"];
+            Resources["HotWheelsLabel"] = App.Current.Resources["HotWheelsLabelF"];
         }
 
         protected override async void OnAppearing()

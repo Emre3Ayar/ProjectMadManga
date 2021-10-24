@@ -4,8 +4,12 @@
              x:Class="ProjectMadManga.Helpers.NavCreatePage"
              Title="Create"
              >
-    <StackLayout>
-        <Label Text="Create Car" BackgroundColor="Black" TextColor="Red" LineHeight="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="40"></Label>
+    <ContentPage.Resources>
+        <ResourceDictionary />
+    </ContentPage.Resources>
+    
+    <StackLayout Style="{DynamicResource HotWheelsStackLayout}">
+        <Label Text="Create Car" Style="{DynamicResource HotWheelsLabel}" LineHeight="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="40"></Label>
         <Button x:Name="BtnCreate" Clicked="BtnCreate_Clicked" Text="Create Car"></Button>
     </StackLayout>
 </ContentPage>

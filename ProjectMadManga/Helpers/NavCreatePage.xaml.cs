@@ -15,7 +15,8 @@ namespace ProjectMadManga.Helpers
         public NavCreatePage()
         {
             InitializeComponent();
-            
+            Resources["HotWheelsStackLayout"] = App.Current.Resources["HotWheelsStackLayoutF"];
+            Resources["HotWheelsLabel"] = App.Current.Resources["HotWheelsLabelF"];
         }
 
         private async void BtnCreate_Clicked(object sender, EventArgs e)

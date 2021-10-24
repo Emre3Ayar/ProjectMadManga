@@ -4,8 +4,8 @@
              x:Class="ProjectMadManga.Helpers.NavMycarsPage"
              Title="MyCars"
              >
-    <StackLayout BackgroundColor="#328ADC">
-        <Label Text="Hot Wheels Cars" BackgroundColor="#FFE032" TextColor="#924E00" LineHeight="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="40"></Label>
+    <StackLayout Style="{DynamicResource HotWheelsStackLayout}">
+        <Label Text="Hot Wheels Cars" LineHeight="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="40" Style="{DynamicResource HotWheelsLabel}"></Label>
         <RefreshView>
             <CollectionView VerticalOptions="FillAndExpand" x:Name="CarLijst" SelectionMode="Single" SelectionChanged="OnSelectedHotWheels">
                 <CollectionView.ItemTemplate>

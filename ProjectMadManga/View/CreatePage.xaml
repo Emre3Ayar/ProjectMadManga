@@ -3,34 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectMadManga.CreatePage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Style="{StaticResource HotWheelsStackLayout}">
             <Label x:Name="LblMelding" Text="Welcome to Create Page"/>
 
-            <Entry x:Name="EntCarName" Text="AutoNaamHier" HorizontalOptions="Center" FontSize="30"></Entry>
+            <Entry x:Name="EntCarName" Style="{StaticResource HotWheelsEntry}" Text="AutoNaamHier" HorizontalOptions="Center" FontSize="30"></Entry>
 
-            <StackLayout BackgroundColor="#FFE032">
-                <Label TextColor="#924E00" Text="0.4 - 2.0"></Label>
-                <Entry x:Name="EntCarAccel" Text="0"></Entry>
+            <StackLayout>
+                <Label Style="{StaticResource HotWheelsLabel}" Text="0.4 - 2.0"></Label>
+                <Entry x:Name="EntCarAccel" Style="{StaticResource HotWheelsEntry}" Text="0"></Entry>
             </StackLayout>
 
-            <StackLayout BackgroundColor="#FFE032">
-                <Label TextColor="#924E00" Text="20 - 90"></Label>
-                <Entry x:Name="EntCarTopSpeed" Text="0"></Entry>
+            <StackLayout>
+                <Label Style="{StaticResource HotWheelsLabel}" Text="20 - 90"></Label>
+                <Entry x:Name="EntCarTopSpeed" Style="{StaticResource HotWheelsEntry}" Text="0"></Entry>
             </StackLayout>
 
-            <StackLayout BackgroundColor="#FFE032">
-                <Label TextColor="#924E00" Text="0.4 - 1.2"></Label>
-                <Entry x:Name="EntCarHandeling" Text="0"></Entry>
+            <StackLayout>
+                <Label Style="{StaticResource HotWheelsLabel}" Text="0.4 - 1.2"></Label>
+                <Entry x:Name="EntCarHandeling" Style="{StaticResource HotWheelsEntry}" Text="0"></Entry>
             </StackLayout>
 
-            <StackLayout BackgroundColor="#FFE032">
-                <Label TextColor="#924E00" Text="0.4 - 1.5"></Label>
-                <Entry x:Name="EntCarBraking" Text="0"></Entry>
+            <StackLayout>
+                <Label Style="{StaticResource HotWheelsLabel}" Text="0.4 - 1.5"></Label>
+                <Entry x:Name="EntCarBraking" Style="{StaticResource HotWheelsEntry}" Text="0"></Entry>
             </StackLayout>
 
-            <StackLayout BackgroundColor="#FFE032">
-                <Label TextColor="#924E00" Text="0 - 20"></Label>
-                <Entry x:Name="EntCarWanted" Text="0"></Entry>
+            <StackLayout>
+                <Label Style="{StaticResource HotWheelsLabel}" Text="0 - 20"></Label>
+                <Entry x:Name="EntCarWanted" Style="{StaticResource HotWheelsEntry}" Text="0"></Entry>
             </StackLayout>
             
             <Button x:Name="BtnCreate" Text="Maak" Clicked="Create_Clicked"></Button>

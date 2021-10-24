@@ -18,6 +18,8 @@ namespace ProjectMadManga
         public CreatePage()
         {
             InitializeComponent();
+            Resources["HotWheelsStackLayout"] = App.Current.Resources["HotWheelsStackLayoutF"];
+            Resources["HotWheelsLabel"] = App.Current.Resources["HotWheelsLabelF"];
         }
         async void Create_Clicked(object sender, System.EventArgs e)
         {

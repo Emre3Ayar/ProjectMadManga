@@ -18,7 +18,6 @@ namespace ProjectMadManga
                 if (database == null)
                 {
                     database = new Data.LocalDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "DbCars.db3"));
-
                 }
                 return database;
             }
