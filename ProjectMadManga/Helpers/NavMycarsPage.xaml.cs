@@ -17,6 +17,8 @@ namespace ProjectMadManga.Helpers
             InitializeComponent();
             Resources["HotWheelsStackLayout"] = App.Current.Resources["HotWheelsStackLayoutF"];
             Resources["HotWheelsLabel"] = App.Current.Resources["HotWheelsLabelF"];
+            Resources["HotWheelsStackLayout"] = App.Current.Resources["HotWheelsStackLayoutM"];
+            Resources["HotWheelsLabel"] = App.Current.Resources["HotWheelsLabelM"];
         }
 
         protected override async void OnAppearing()

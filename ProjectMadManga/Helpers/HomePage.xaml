@@ -4,6 +4,12 @@
              x:Class="ProjectMadManga.Helpers.HomePage"
              IconImageSource="Options.png">
     <ContentPage.Content>
-        <Label Text="Options" BackgroundColor="Black" TextColor="Red" LineHeight="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="40"></Label>
+        <TableView Intent="Settings">
+            <TableRoot Title="Options Menu">
+                <TableSection>
+                    <SwitchCell x:Name="PinkSwitch" Text="PinkMode"></SwitchCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </ContentPage.Content>
 </ContentPage>

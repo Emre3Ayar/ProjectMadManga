@@ -31,7 +31,7 @@ namespace ProjectMadManga
             if (resultGebruiker != null && resultPassword != null)
             {
                 Preferences.Set("gebruikersnaam", EntGebruikersnaam.Text);
-                Preferences.Set("password", EntPassword.Text);
+                Preferences.Set("password", EntPassword.Text);              
                 //navigatie naar MainPage2
                 gebruiker = EntGebruikersnaam.Text;
                 await this.Navigation.PushAsync(new MainPage2());

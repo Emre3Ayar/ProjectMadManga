@@ -15,8 +15,6 @@ namespace ProjectMadManga
         public DetailPage(string CarName,string CarImage,double CarAccel,double CarTopSpeed,double CarWanted, string CarDetail)
         {
             InitializeComponent();
-
-
             LblAccel.Text = "Acceleratie: ";
             LblTopSpeed.Text = "Topsnelheid: ";
             LblWanted.Text = "Wanted Level: ";
@@ -77,6 +75,14 @@ namespace ProjectMadManga
                 LblWanted.TextColor = Color.Green;
                 LblWanted.Text += " Suspect";
             }
+        }
+        async void Delete_Event(object sender, EventArgs args)
+        {
+            if (await DisplayAlert("Warning", $"Are you sure you want to delete {LblNaam.Text}?", "Yes", "No"))
+            {
+                await App.Database.DeleteCar(LblNaam.Text);
+            }          
+            await this.Navigation.PopAsync();
         }
     }
 }

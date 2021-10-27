@@ -3,33 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectMadManga.CreatePage">
     <ContentPage.Content>
-        <StackLayout Style="{StaticResource HotWheelsStackLayout}">
+        <StackLayout Style="{DynamicResource HotWheelsStackLayout}">
             <Label x:Name="LblMelding" Text="Welcome to Create Page"/>
 
             <Entry x:Name="EntCarName" Style="{StaticResource HotWheelsEntry}" Text="AutoNaamHier" HorizontalOptions="Center" FontSize="30"></Entry>
 
             <StackLayout>
-                <Label Style="{StaticResource HotWheelsLabel}" Text="0.4 - 2.0"></Label>
+                <Label Style="{DynamicResource HotWheelsLabel}" Text="0.4 - 2.0"></Label>
                 <Entry x:Name="EntCarAccel" Style="{StaticResource HotWheelsEntry}" Text="0"></Entry>
             </StackLayout>
 
             <StackLayout>
-                <Label Style="{StaticResource HotWheelsLabel}" Text="20 - 90"></Label>
+                <Label Style="{DynamicResource HotWheelsLabel}" Text="20 - 90"></Label>
                 <Entry x:Name="EntCarTopSpeed" Style="{StaticResource HotWheelsEntry}" Text="0"></Entry>
             </StackLayout>
 
             <StackLayout>
-                <Label Style="{StaticResource HotWheelsLabel}" Text="0.4 - 1.2"></Label>
+                <Label Style="{DynamicResource HotWheelsLabel}" Text="0.4 - 1.2"></Label>
                 <Entry x:Name="EntCarHandeling" Style="{StaticResource HotWheelsEntry}" Text="0"></Entry>
             </StackLayout>
 
             <StackLayout>
-                <Label Style="{StaticResource HotWheelsLabel}" Text="0.4 - 1.5"></Label>
+                <Label Style="{DynamicResource HotWheelsLabel}" Text="0.4 - 1.5"></Label>
                 <Entry x:Name="EntCarBraking" Style="{StaticResource HotWheelsEntry}" Text="0"></Entry>
             </StackLayout>
 
             <StackLayout>
-                <Label Style="{StaticResource HotWheelsLabel}" Text="0 - 20"></Label>
+                <Label Style="{DynamicResource HotWheelsLabel}" Text="0 - 20"></Label>
                 <Entry x:Name="EntCarWanted" Style="{StaticResource HotWheelsEntry}" Text="0"></Entry>
             </StackLayout>
             

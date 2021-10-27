@@ -22,7 +22,7 @@ namespace ProjectMadManga.Data
         public async Task<List<Car>> GetCars()
         {
             //Reset database
-            await _database.DeleteAllAsync<Car>();
+            //await _database.DeleteAllAsync<Car>();
             //return _database.Table<Car>().ToListAsync();
             var car = await _database.Table<Car>().ToListAsync();
             if (!car.Any())
@@ -42,6 +42,11 @@ namespace ProjectMadManga.Data
         public Task<int> SaveCar(Car car)
         {
             return _database.InsertAsync(car);
+        }
+        public Task<int> DeleteCar(string car)
+        {
+            //_database.QueryAsync<Car>("SELECT * FROM Car WHERE CarName = ?", car);
+            return _database.Table<Car>().DeleteAsync(x => x.CarName == car);
         }
 
         public async Task<int> NameControl(string name)
